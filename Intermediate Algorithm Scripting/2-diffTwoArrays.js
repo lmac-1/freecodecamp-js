@@ -7,8 +7,10 @@ but not both. In other words, return the symmetric difference of the two arrays.
 Note: You can return the array with its elements in any order. */
 
 function diffArray(arr1,arr2) {
-    // Join the two arrays together
-    return arr1.concat(arr2)
+    
+    return arr1
+            // Join the two arrays together for easier evaluating
+            .concat(arr2)
             // Apply filter function and check that at least one of the arrays does not include the element
             .filter(element => !arr1.includes(element) || !arr2.includes(element));
 }

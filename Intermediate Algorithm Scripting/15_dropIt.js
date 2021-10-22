@@ -10,13 +10,9 @@ function dropElements(arr, func) {
     // We make a copy of the array to ensure we don't change original array
     let array = [...arr];
 
-    while (array.length > 0) {
-        if (func(array[0])) {
-            return array;
-        }
-        else {
-            array.splice(0,1);
-        }
+    while (array.length > 0 && !func(array[0])) {
+        // you can also use array.shift()
+        array.splice(0,1);
     }
     
     return array;

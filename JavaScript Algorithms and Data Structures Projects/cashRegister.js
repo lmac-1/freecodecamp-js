@@ -59,7 +59,7 @@ function checkCashRegister(price, cash, cid) {
             unitRemainingInRegister = parseFloat((unitRemainingInRegister - amounts[i]).toFixed(2))
             changeRequired = parseFloat((changeRequired - amounts[i]).toFixed(2))
         }
-        console.log(unitAmountInChange, cid[i][1])
+        
         if (unitAmountInChange != cid[i][1]) status = 'OPEN';
 
         if (unitAmountInChange > 0) {

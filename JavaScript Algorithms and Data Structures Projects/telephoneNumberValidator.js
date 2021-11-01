@@ -33,7 +33,7 @@ function telephoneCheck(str) {
     \d{4} -> 4 digits
     $ end of string
     */
-    let regex = /^(1\s?)?((\(\d{3}\))|\d{3})(\s|-)?\d{3}(\s|-)?\d{4}$/g
+    let regex = /^(1\s?)?((\(\d{3}\))|\d{3})(\s|-)?\d{3}(\s|-)?\d{4}$/
     return regex.test(str);
 
 
